@@ -1,0 +1,13 @@
+const distance=parseInt(prompt("enter the distance in kilometer"));
+let feet=distance*3280.84;
+let meter=distance*1000;
+let inch=distance*39370;
+let centimeter=distance*100000;
+console.log("Meter value is: "+meter);
+console.log("Feet value is: "+feet);
+console.log("Inch value is "+inch);
+console.log("Centimeter value is: "+meter);
+document.writeln("Meter value is: "+ meter+"<br>");
+document.writeln("Meet value is: "+ feet+"<br>");
+document.writeln("Inch value is: "+ inch+"<br>");
+document.writeln("Centimeter value is: "+ centimeter+"<br>");

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="number">Choose Number</label>
+    <select name="number" id="number">
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+<option value="13">13</option>
+<option value="14">14</option>
+<option value="15">15</option>
+<option value="16">16</option>
+<option value="17">17</option>
+<option value="18">18</option>
+<option value="19">19</option>
+<option value="20">20</option>
+    </select><br><br>
+    <button onclick="table()" > SHOW MULTIPLICATION TABLE</button>
+    <br>
+    
+    
+    <script>
+        function table()
+        {
+            // //let num="";
+            // let result;
+            // let a=document.querySelector('#number');
+            // let b=a.options[a.selectedIndex].value;
+           // var select = document.getElementById('language');
+            //var value = select.options[select.selectedIndex].value;
+            let a=document.getElementById("number");
+            let b=a.options[a.selectedIndex].value;
+        
+            console.log(b);
+            for(let i=1;i<=10;i++)
+            {
+                result=i*b;
+                //document.getElementById("num1").value=result;
+                document.writeln(result+"<br>");
+                console.log(result);
+            }
+           // document.getElementById("demo").innerHTML=num;
+        }
+    </script>
+</body>
+</html>

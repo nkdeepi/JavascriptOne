@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="" action=" "  name="myform" onsubmit="return validateform()">
+        <label for="fname"> <b>FIRST NAME</b></label>
+    <input type="text" id="fname">
+<br><br>
+    <label for="sname"> <b>FATHER'S NAME</b></label>
+    <input type="text" id="sname">
+<br><br>
+    <label for="mname"> <b>MOTHER'S NAME</b></label>
+    <input type="text" id="mname">
+<br><br>
+    <label for="mno"> <b>MOBILE NO</b></label>
+    <input type="text" id="mno">
+    <br><br>
+    <label for="city"><b>Choose City</b></label>
+    <select name="city" id="city">
+<option value="KOCHI">KOCHI</option>
+<option value="CHENNAI">CHENNAI</option>
+<option value="BANGLORE">BANGLORE</option>
+<option value="KOLKATTA">KOLKATTA</option>
+<option value="MUMBAI">MUMBAI</option>
+</select>
+<br><br>
+<label for="pwd"> <b>PASSWORD</b></label>
+    <input type="text" id="pwd">
+    <br><br>
+    <label for="rpwd"> <b>RE ENTER PASSWORD</b></label>
+    <input type="text" id="rpwd">
+    <br><br>
+    <input type="checkbox" id="chk">
+    <label for="chk">I accept terms and conditions</label>
+<br>
+<br>
+<input type="submit" name="submit" value="Submit"> 
+    </form>
+    <script>
+        function validateform(){
+let fn= document.myform.fname.value;
+let sn= document.myform.sname.value;
+let mn= document.myform.mname.value;
+let mnob= document.myform.mno.value;
+let pd= document.myform.pwd.value;
+let cpd= document.myform.rpwd.value;
+var numbers = /^[0-9]+$/;
+if((fn==" ")||(sn=="")||(mn==" ")||(mnob==" ")||(pd==" ")||(cpd==" "))
+{
+    alert("Form fields must be filled out");
+    fname.focus();  
+            return false;  
+}
+//NAME VALIDATION
+if((fn.length<3)||(fn.length>30))
+{
+alert("Name should consists of minimum of 3 and max of 30 characters");
+fname.focus(); 
+}
+if((sn.length<3)||(sn.length>30))
+{
+alert(" Fathers Name should consists of minimum of 3 and max of 30 characters");
+sname.focus(); 
+}
+if((mn.length<3)||(mn.length>30))
+{
+alert(" Mothers should consists of minimum of 3 and max of 30 characters");
+mname.focus(); 
+}
+//MOBILE NUMBER VALIDATION
+if((mnob.length>10)||(mnob.length<10))
+{
+    alert("Mobile Number should be 10 digits");
+    mno.focus();
+    return false;
+
+}
+if((mnob.match(numbers)))
+alert("correct");
+else{
+    alert("please enter correct mobile number");
+}
+//validation for checkbox
+if(!this.myform.chk.checked){
+    alert('You must agree to the terms and conditions first.');
+    
+    return false;
+}
+//password validation
+if(pwd.value.length<8)
+{
+    alert("password should consists of atleast 8 characters ");
+    pwd.focus();
+}
+if(pwd.value!=rpwd.value)
+{
+    alert("password entered not same");
+    pwd.focus();
+
+}
+        }
+
+    </script>
+
+    
+    
+</body>
+</html>
